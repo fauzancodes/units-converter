@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://kit.fontawesome.com/5c503e8b03.js" crossorigin="anonymous"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&display=swap" rel="stylesheet">
+        <link rel=icon href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/svgs/solid/square-root-alt.svg>
+        <link rel="stylesheet" href="style.css">
+        <title>Units Converter</title>
+    </head>
+    <body style="background: url(background.png) no-repeat center fixed;background-size: cover;">
+        <div class="container">
+            <div class="row bg-dark text-light d-flex justify-content-center align-items-center">
+                <header class="my-5 col-11 col-sm-11 col-md-11 col-lg-11 col-xl-11 border-bottom border-primary">
+                    <h1 class="text-center">Units Converter</h1>
+                </header>
+                <section class="row py-1 col-11 col-sm-11 col-md-11 col-lg-11 col-xl-11 border-bottom border-top border-primary d-flex justify-content-center align-items-center">
+                    <button class="m-1 btn btn-primary btn-sm" onclick="function_filter(this)">Prefix</button>
+                    <button class="m-1 btn btn-outline-primary btn-sm" onclick="function_filter(this)">Time</button>
+                    <button class="m-1 btn btn-outline-primary btn-sm" onclick="function_filter(this)">Angle</button>
+                    <button class="m-1 btn btn-outline-primary btn-sm" onclick="function_filter(this)">Length</button>
+                    <button class="m-1 btn btn-outline-primary btn-sm" onclick="function_filter(this)">Area</button>
+                    <button class="m-1 btn btn-outline-primary btn-sm" onclick="function_filter(this)">Volume</button>
+                    <button class="m-1 btn btn-outline-primary btn-sm" onclick="function_filter(this)">Mass</button>
+                    <button class="m-1 btn btn-outline-primary btn-sm" onclick="function_filter(this)">Energy</button>
+                    <button class="m-1 btn btn-outline-primary btn-sm" onclick="function_filter(this)">Force</button>
+                    <button class="m-1 btn btn-outline-primary btn-sm" onclick="function_filter(this)">Pressure</button>
+                    <button class="m-1 btn btn-outline-primary btn-sm" onclick="function_filter(this)">Temperature</button>
+                </section>
+                <main class="row my-2 col-11 col-sm-11 col-md-11 col-lg-11 col-xl-11 d-flex justify-content-center align-items-center">
+                    <section id="prefix" class="row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 justify-content-start align-items-center p-2">
+                        <h3 class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 pt-2">Prefix</h3>
+                        <!--prefix data will be here-->
+                    </section>
+                    <section id="time" class="row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 justify-content-start align-items-center p-2">
+                        <h3 class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 pt-2">Time</h3>
+                        <!--time data will be here-->
+                    </section>
+                    <section id="angle" class="row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 justify-content-start align-items-center p-2">
+                        <h3 class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 pt-2">Angle</h3>
+                        <!--angle data will be here-->
+                    </section>
+                    <section id="length" class="row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 justify-content-start align-items-center p-2">
+                        <h3 class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 pt-2">Length</h3>
+                        <!--length data will be here-->
+                    </section>
+                    <section id="area" class="row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 justify-content-start align-items-center p-2">
+                        <h3 class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 pt-2">Area</h3>
+                        <!--area data will be here-->
+                    </section>
+                    <section id="volume" class="row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 justify-content-start align-items-center p-2">
+                        <h3 class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 pt-2">Volume</h3>
+                        <!--volume data will be here-->
+                    </section>
+                    <section id="mass" class="row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 justify-content-start align-items-center p-2">
+                        <h3 class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 pt-2">Mass</h3>
+                        <!--mass data will be here-->
+                    </section>
+                    <section id="energy" class="row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 justify-content-start align-items-center p-2">
+                        <h3 class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 pt-2">Energy</h3>
+                        <!--energy data will be here-->
+                    </section>
+                    <section id="force" class="row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 justify-content-start align-items-center p-2">
+                        <h3 class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 pt-2">Force</h3>
+                        <!--force data will be here-->
+                    </section>
+                    <section id="pressure" class="row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 justify-content-start align-items-center p-2">
+                        <h3 class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 pt-2">Pressure</h3>
+                        <!--pressure data will be here-->
+                    </section>
+                    <section id="temperature" class="row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 justify-content-start align-items-center p-2">
+                        <h3 class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 pt-2">Temperature</h3>
+                        <!--temperature data will be here-->
+                    </section>
+                </main>
+                <footer class="py-2 mt-3 col-11 col-sm-11 col-md-11 col-lg-11 col-xl-11 text-center border-top border-primary">
+                    &copy 2021,
+                    <a class="pl-1" href="https://www.instagram.com/m_fzn_m/" target="_blank">
+                        <i class="fab fa-instagram"></i> 
+                        @m_fzn_m
+                    </a>
+                </footer>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
